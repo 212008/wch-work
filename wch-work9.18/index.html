@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #a{
+            width: 100px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="in1" value="">
+    +
+    <input type="text" id="in2" value="">
+    <button id="btn">计算</button>
+    <div id="a"></div>
+    <script>
+        var btn = document.getElementById('btn');
+
+        btn.onclick = function(){
+            var in1 = document.getElementById('in1');
+            var in2 = document.getElementById('in2');
+            var a = document.getElementById('a');
+            if(isNaN(in1.value)==true){
+                alert('请在第一个输入框输入数字')
+            }
+            if(isNaN(in2.value)==true){
+                alert('请在第二个输入框输入数字')
+            }
+            in1 = parseInt(Number(in1.value));
+            in2 = parseInt(Number(in2.value));
+            var c = in1+in2
+           a.innerHTML = c;
+           
+        }
+    </script>
+</body>
+</html>
