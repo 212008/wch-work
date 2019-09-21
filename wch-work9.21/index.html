@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        请输入卡号:298329830
+        <br>
+        <input type="text" id="kh" value="">
+        <br>
+        请输入密码:wodada
+        <br>
+        <input type="password" id="mm" value="">
+        <br>
+        <button id="btn">登录</button>
+    </div>
+    <script>
+        var btn = document.getElementById('btn')
+        btn.onclick = function(){
+            var kh = document.getElementById('kh');
+            var mm = document.getElementById('mm');
+            var a = kh.value;
+            var b = mm.value;
+            if(a == '298329830' && b == 'wodada'){
+                var v = confirm('您的卡上余额为:9.99 您要取吗?')
+                var z = Number(prompt('输入金额'))
+                if(v){
+                    if(z<9.99){
+                        alert(((9.99*10e10)-(z*10e10))/10e10)
+                    
+                    }
+                }
+            }else{
+                alert('密码错误')
+            }
+        }
+    </script>
+</body>
+</html>
