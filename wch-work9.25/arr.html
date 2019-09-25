@@ -8,8 +8,8 @@
             position: relative;
         }
         #box>div{
-            width: 60px;
-            height: 60px;
+            width: 120px;
+            height: 120px;
             border: 1px solid black;
             position: absolute;
             background:url(img/1.JPEG);
@@ -22,14 +22,14 @@
     <div id="box"></div>
     <script>
         var box = document.getElementById('box')
-        for(i=0;i<18;i++){
-            for(j=0;j<32;j++){
+        for(i=0;i<9;i++){
+            for(j=0;j<16;j++){
                 var div = document.createElement('div')
                 box.appendChild(div)
-                div.style.top = i * 60 +'px';
-                div.style.left = j * 60 +'px';
-                div.style.backgroundPositionX = j * -60 +'px';
-                div.style.backgroundPositionY = i * -60 +'px';
+                div.style.top = i * 120 +'px';
+                div.style.left = j * 120 +'px';
+                div.style.backgroundPositionX = j * -120 +'px';
+                div.style.backgroundPositionY = i * -120 +'px';
                 div.onmousemove = function(){
                      this.style.opacity = 1;
                 }
