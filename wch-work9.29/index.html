@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    用户名：<input type="text" id="in1"><span id="s"></span>
+    <br>
+    密码:<input type="password" id="in2">
+    <br>
+    <button id="btn">注册</button>
+    <script>
+        var in1 = document.getElementById('in1');
+        var in2 = document.getElementById('in2');
+        var btn = document.getElementById('btn');
+        var s = document.getElementById('s');
+        in2.onfocus = function(){
+            if(in1.value == ''){
+                s.innerText = '请输入用户名';
+            }else{
+                s.innerText = '您可以使用';
+            }
+        }
+        btn.onclick = function(){
+            if(in1.value == ''){
+                alert('请输入用户名');
+            }else{
+                if(in2.value == ''){
+                    alert('请输入密码');
+                }else{
+                    alert('注册完成');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
