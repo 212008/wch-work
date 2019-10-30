@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <script src="jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: red;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 4px solid white;
+            background-color: lightcoral;
+            position: absolute;
+            box-sizing: border-box;
+            z-index: 10;
+        }
+
+        p {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 4px solid white;
+            background-color: red;
+            list-style: none;
+            box-sizing: border-box;
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            transition: 1s;
+            z-index: 1;
+        }
+
+        .blan {
+            background-color: blanchedalmond;
+        }
+
+        .yel {
+            background-color: yellow;
+        }
+
+        .gre {
+            background-color: green;
+        }
+
+        .bla {
+            background-color: black;
+        }
+
+        .blu {
+            background-color: blue;
+        }
+
+        .ora {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mydiv"></div>
+    <p class="ora"></p>
+    <p class="blu"></p>
+    <p class="bla"></p>
+    <p class="gre"></p>
+    <p class="yel"></p>
+    <p class="blan"></p>
+    <script>
+        var a = 0;
+        var bbb = 0;
+        $("#mydiv").click(function () {
+            if (bbb == 0) {
+                $("p").each(function () {
+                    $(this).css({ "top": a * 70 + 120 }).click(function () {
+                        $("div").attr("class", $(this).attr("class"));
+                        $("body").attr("class", $(this).attr("class"));
+                    });
+                    a++
+                })
+                bbb = 1;
+                a = 0;
+            } else {
+                $("p").css({ "top": "27px" });
+                bbb = 0;
+            }
+        })
+
+    </script>
+</body>
+<html>
