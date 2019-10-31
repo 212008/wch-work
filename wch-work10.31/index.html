@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <input type="checkbox" name="" id="ch1">华为mate20
+    <input type="number" id="nb1" value="1">
+    单价：￥9999
+    合计：<b id="d1"></b>元
+    <br>
+    <input type="checkbox" name="" id="ch2">小米8
+    <input type="number" id="nb2" value="1">
+    单价：￥555
+    合计：<b id="d2"></b>元
+    <br>
+    <p id="d3">0</p>
+    <script>
+        var a = 0;
+        var b = 0;
+        $('#d1').html($('#nb1').val() * 9999);
+        $('#nb1').change(function () {
+            $('#d1').html($('#nb1').val() * 9999);
+            if (a == 1 && b == 1) {
+                $('#d3').html(Number($('#d1').html()) + Number($('#d2').html()));
+            } else if (a == 1 && b == 0) {
+                $('#d3').html(Number($('#d1').html()));
+            } else if (b == 1 && a == 0) {
+                $('#d3').html(Number($('#d2').html()));
+            } else {
+                $('#d3').html('0');
+            }
+        })
+        $('#d2').html($('#nb2').val() * 9999);
+        $('#nb2').change(function () {
+            $('#d2').html($('#nb2').val() * 555);
+            if (a == 1 && b == 1) {
+                $('#d3').html(Number($('#d1').html()) + Number($('#d2').html()));
+            } else if (a == 1 && b == 0) {
+                $('#d3').html(Number($('#d1').html()));
+            } else if (b == 1 && a == 0) {
+                $('#d3').html(Number($('#d2').html()));
+            } else {
+                $('#d3').html('0');
+            }
+        })
+        $('#ch1').click(function () {
+            if (a == 0) {
+                a = 1
+            } else {
+                a = 0
+            }
+            if (a == 1 && b == 1) {
+                $('#d3').html(Number($('#d1').html()) + Number($('#d2').html()));
+            } else if (a == 1 && b == 0) {
+                $('#d3').html(Number($('#d1').html()));
+            } else if (b == 1 && a == 0) {
+                $('#d3').html(Number($('#d2').html()));
+            } else {
+                $('#d3').html('0');
+            }
+        })
+        $('#ch2').click(function () {
+            if (b == 0) {
+                b = 1
+            } else {
+                b = 0
+            }
+            if (a == 1 && b == 1) {
+                $('#d3').html(Number($('#d1').html()) + Number($('#d2').html()));
+            } else if (a == 1 && b == 0) {
+                $('#d3').html(Number($('#d1').html()));
+            } else if (b == 1 && a == 0) {
+                $('#d3').html(Number($('#d2').html()));
+            } else {
+                $('#d3').html('0');
+            }
+        })
+    </script>
+</body>
+
+</html>
