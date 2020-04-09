@@ -1,0 +1,32 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+/*重写CSS样式*/
+body{
+	font-size: 12px;
+	line-height: 1.5;
+	font-family: "arial, helvetica, sans-serif";
+	color:#323232;
+	margin:0;
+	padding:0;
+	background:#FFFFFF;
+	text-align: left;
+}
+ul{
+	list-style: none;
+}
+a{
+	color:#ccc;
+	text-decoration:none;
+}
+.lf{
+	float: left;
+}
+.rt{
+	float: right;
+}
+div.main{
+	width:1160px;
+	margin: 0 auto;
+}
